@@ -1,4 +1,5 @@
 import React from 'react'
+import Counter from './Counter'
 
 const Product = (props) => {
   return (
@@ -7,6 +8,7 @@ const Product = (props) => {
             <img className='rounded-md w-48' src={props.image} alt='product' />
             <p className='font-bold'>{props.title}</p>
             <p>{props.description}</p>
+            <Counter/>
         </div>
     </>
   )

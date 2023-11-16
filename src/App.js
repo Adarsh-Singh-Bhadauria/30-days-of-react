@@ -1,10 +1,24 @@
 import './App.css';
+import About from './components/About';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Login from './components/Login';
+import Navbar from './components/Navbar';
+import UserData from './components/UserData';
+import {Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="text-3xl font-extrabold">
-      Hello!!!
-    </div>
+    <>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/users" element={<UserData/>} />
+        <Route path="/login" element={<Login/>} />
+      </Routes>
+      <Footer/>
+    </>
   );
 }
 

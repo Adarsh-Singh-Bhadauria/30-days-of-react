@@ -54,7 +54,7 @@ const TodoList = () => {
                 ))}
                 </ul>
             ) : (
-                <p className='font-bold'>No task found</p>
+                <p className='font-bold dark:text-white'>No task found</p>
             )}
         </div>
     </div>

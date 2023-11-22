@@ -16,7 +16,7 @@ const UserData = () => {
 
   return (
     <>
-        <p className='text-4xl font-extrabold my-8 text-center'>Random User Data</p>
+        <p className='text-4xl font-extrabold my-8 text-center dark:text-white'>Random User Data</p>
         <ul className='flex flex-wrap space-x-4 space-y-4 justify-center my-8'>
             {posts.map(post => (
                 <div className='flex flex-col text-center w-1/5 p-4 bg-red-200 rounded-lg'>

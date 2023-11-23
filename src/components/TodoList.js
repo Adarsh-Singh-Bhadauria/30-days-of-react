@@ -34,12 +34,10 @@ const TodoList = () => {
             />
             <button className='mx-8 py-2 px-4 bg-green-500 text-white font-bold rounded-md' onClick={addTodo}> Add </button>
         </div>
-
-
         <div>
             {todos?.length > 0 ? (
                 <ul className='space-y-4'>
-                {todos.map((entry, index) => (
+                    {todos.map((entry, index) => (
                     <div className="flex space-x-4 justify-between">
                     <li key={index} className='px-4 py-2 bg-slate-600 text-white font- rounded-md'> {entry} </li>
 
@@ -50,12 +48,9 @@ const TodoList = () => {
                     >
                         Delete
                     </button>
-                    </div>
-                ))}
+                    </div>))}
                 </ul>
-            ) : (
-                <p className='font-bold dark:text-white'>No task found</p>
-            )}
+            ) : (<p className='font-bold dark:text-white'>No task found</p>)}
         </div>
     </div>
   )

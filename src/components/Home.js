@@ -4,7 +4,6 @@ import Product from './Product'
 
 const Home = () => {
   return (
-    <>
     <div>
       <div>
         <Header/>
@@ -19,7 +18,6 @@ const Home = () => {
         <Product image='earbuds.jpg' title="Earbuds" description="Available on Amazon" />
       </div>
     </div>
-    </>
   )
 }
 

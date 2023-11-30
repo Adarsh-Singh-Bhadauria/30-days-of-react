@@ -1,5 +1,6 @@
 import './App.css';
 import About from './components/About';
+import CartContainer from './components/CartContainer';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Login from './components/Login';
@@ -25,6 +26,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/products" element={<Products />} />
         <Route path="/todo" element={<TodoList />} />
+        <Route path="/cartcontainer" element={<CartContainer />} />
       </Routes>
       <Footer/>
     </div>

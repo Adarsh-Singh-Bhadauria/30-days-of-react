@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 
 const TodoList = () => {
     const [todos, setTodos] = useState([]);
     const [todo, setTodo] = useState("");
+    let num = useRef(0);
 
     const addTodo = () => {
         if (todo !== "") {
@@ -16,6 +17,11 @@ const TodoList = () => {
           return todo !== text;
         });
         setTodos(newTodos);
+      };
+
+      const handleClick = () => {
+        num.current += 1;
+        console.log(num.current);
       };
   
 
@@ -32,7 +38,7 @@ const TodoList = () => {
                 setTodo(e.target.value);
                 }}
             />
-            <button className='mx-8 py-2 px-4 bg-green-500 text-white font-bold rounded-md' onClick={addTodo}> Add </button>
+            <button className='mx-8 py-2 px-4 bg-green-500 text-white font-bold rounded-md' onClick={() => {addTodo(); handleClick();}}> Add </button>
         </div>
         <div>
             {todos?.length > 0 ? (
